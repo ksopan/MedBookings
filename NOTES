@@ -1,0 +1,68 @@
+#How to check if user in adatbase
+#First import app
+#from app import db
+#Then import the model like follows
+#from app import User
+# Get all the user Data
+# user=User.query.all()
+# Create new user
+# user = User(username='Shawty lanky',email='abc1@gmail.com',fname='shawty',lname='lanky',passwd='1234')
+# After that add user
+# db.session.add(user)
+# db.session.commit()
+#data = User.query.all()
+#Get the first and second user resp
+#data[0]
+#data[1]
+#get email of user
+#data[0].email
+#
+#
+#How to display message ... use flask flash module
+# We flash message with Message and Message Category ('error' or 'warning' or 'Success') etc
+#
+#Also use "Redirect" to redirect the webpage at different location
+#
+#For Flask login page after user login ...
+# install flask-login module
+#
+# First load the user loader
+# Then import UserMixin
+# And give UserMixin as argument to the Class User i.e. to the Model
+#
+# In main.html
+# use if logic to display current blog and reservation to the logged in user only
+#
+# Blogging page started at Lesson 16
+#
+# Lession 18: In order to view the submitted form data from database on the homepage one need to use for jinja for loop in order to get the database fields
+## Home page Boostraps settings for Card on homepage
+
+
+{% extends 'main.html' %}
+
+{% block title %}
+<title>Reservation</title>
+{% endblock title %}
+{% block body %}
+
+<h1>Reservation Details</h1>
+<form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1"> Name</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" name='fullname'>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Location</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="location" name='location'>
+      </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1"> Details</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea
+        name='details'>
+    </div>
+
+    <input type="submit" value='SUBMIT' class="btn btn-primary">
+  </form>
+
+{% endblock body %}
